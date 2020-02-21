@@ -5,6 +5,7 @@
 // handle only the exceptions you are trying to handle.
 // Example Output:
 // console.log(reliableMultiply(8, 8)); // outputs 64
+"use strict";
 
 class MultiplicatorUnitFailure extends Error {}
 
@@ -14,8 +15,20 @@ function primitiveMultiply(a, b) {
   } else {
     throw new MultiplicatorUnitFailure("Klunk");
   }
+};
+
+while (true) {
+
+  try {
+    let result = primitiveMultiply();
+    break;
+  }catch (error) {
+    console.log(error);
+  }
+
 }
+
 
 function reliableMultiply(a, b) {
   // Your code here.
-}
+};
